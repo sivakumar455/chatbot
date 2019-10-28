@@ -1,1 +1,1 @@
-Build your ChatBot.
+Build your own ChatBot.
