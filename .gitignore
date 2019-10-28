@@ -1,0 +1,6 @@
+
+# Ignoring some files
+bkp/
+.DS_Store
+*.pkl
+.ipynb_checkpoints/
