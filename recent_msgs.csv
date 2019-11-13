@@ -1,3 +1,21 @@
 ,query,output
-0,what is the time now
+0,need water to drink
+1,greeting
+0,need water to drink
+1,greeting
+0,hi 
+1,greeting
+0,im leaving
 1,goodbye
+0,leaving
+1,goodbye
+0,how old
+1,age
+0,call you
+1,greeting
+0,whats on menu
+1,shop
+0,when are you open
+1,greeting
+0,when are you guys open
+1,hours

@@ -2,6 +2,6 @@
 # Ignoring some files
 bkp/
 .DS_Store
-*.pkl
+#*.pkl
 .ipynb_checkpoints/
 .idea/
