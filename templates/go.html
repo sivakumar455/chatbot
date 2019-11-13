@@ -9,6 +9,15 @@
     <p class="text-center"><i>{{predicted}}</i></p>
 
     <h4 class="text-center">Recent Messages</h4>
-    <p class="text-center"><i>{{recent_msgs}}</i></p>
+    
+    <ol>
+    <!-- For loop logic of jinja template -->
+    {%for i in range(0, length)%}
+
+    <li>{{recent_msgs[i]}}</li>
+    {%endfor%}
+
+    </ol>
+    <!--p class="text-center"><i>{{recent_msgs}}</i></--p>
 
 {% endblock %}

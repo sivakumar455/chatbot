@@ -46,13 +46,19 @@ def go():
     #print("Pred",res)
     #print(type(res))
 
-    df1 = pd.DataFrame([query,res])
+    df1 = pd.DataFrame({'query':query,'output':res},index=[1],columns = res_cols)
     with open('recent_msgs.csv', 'a') as f:
         df1.to_csv(f, header=False)
 
-    recent_msgs = df1
+    dff = pd.read_csv("recent_msgs.csv")
 
-    return render_template('go.html',query=query, predicted=res,recent_msgs=recent_msgs)
+    recent_msgs = dff.query
+    recent_output = dff.output
+    print(recent_msgs)
+    length = dff.shape[0]
+    print(length)
+
+    return render_template('go.html',query=query, predicted=res,recent_msgs=recent_msgs,recent_output=recent_output,length=length)
 
 app.run(host='localhost',port=3001,debug=True)
 
