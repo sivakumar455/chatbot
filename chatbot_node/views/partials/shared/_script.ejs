@@ -1,0 +1,21 @@
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+<script src="/assets/js/home.js"></script>
+
+<!-- <% if (pageMeta && pageMeta.assets ) {
+  let files = pageMeta.assets.js;
+  if ( files && files.length ) {
+    let len = files.length, cnt = 0;
+    for(cnt=0; cnt<len; cnt++) {
+        let assetBundle = files[cnt];
+        let linkTags = '<script src="' + assetBundle + '">';
+        %><%- linkTags -%><%
+    }
+  }
+} %> -->
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    new window.Home();
+  });
+</script>

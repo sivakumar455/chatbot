@@ -1,4 +1,7 @@
 import flask
+from flask import jsonify
+
+from flask_cors import CORS, cross_origin
 
 from flask import render_template, Flask, request
 
@@ -37,6 +40,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/go')
+@cross_origin()
 def go():
     query = request.args.get('query', '')
     #print("Query",query)
@@ -58,7 +62,11 @@ def go():
     length = dff.shape[0]
     print(length)
 
-    return render_template('go.html',query=query, predicted=res,recent_msgs=recent_msgs,recent_output=recent_output,length=length)
+    #return jsonify(query=query, predicted=res,recent_msgs=recent_msgs,recent_output=recent_output,length=length)
+   
+    resp = jsonify(query=query,predicted=res)
 
-app.run(host='localhost',port=3001,debug=True)
+    return resp 
+
+app.run(host='192.168.1.6',debug=True)
 

@@ -1,0 +1,27 @@
+#chat-window {
+  height: 100vh;
+}
+
+#message-window {
+  padding-top: 2%;
+  background: #CCE7F5;
+  height: 100vh;
+}
+
+#query-form {
+  position: fixed;
+  width: 570px;
+  margin-left: -15px;
+  bottom: 15px;
+}
+
+.query-input {
+  background: ghostwhite;
+  margin-left: 5%;
+  padding: 2%
+}
+
+.query-output {
+  background: #EFEBEA;
+  padding: 2%
+}
